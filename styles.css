@@ -1,0 +1,85 @@
+body {
+    font-family:'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+header{
+    padding: 0px;
+    margin: 0px 110px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+header h1 {
+    margin: 5px 0;
+    font-size: 2em;
+}
+
+.header-content {
+    display: flex;
+    
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+/* Image Styling */
+.poster {
+    max-width: 40%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.poster:hover {
+    transform: scale(1.05);
+}
+
+/* Trailer Styling */
+.trailer {
+    width: 50%; /* Same width as the poster */
+    height: 250px; /* Same height as the poster */
+    aspect-ratio: 16 / 9; /* Ensures the trailer maintains a standard video aspect ratio */
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.trailer:hover {
+    transform: scale(1.05);
+}
+
+/* Section Styling */
+section {
+    padding: 0px 10px;
+    margin: 0px auto;
+}
+section div {
+    background-color: #fff;
+    padding: 10px;
+    margin: 0px 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+section div:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+.producer, .description, .summary, .why-love {
+    font-size: 1em;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    margin: 0px 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+}
