@@ -1,85 +1,120 @@
 body {
-    font-family:'Courier New', Courier, monospace;
-    margin: 0;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin: 0 auto;
     padding: 0;
-    background-color: #f4f4f4;
-}
-header{
-    padding: 0px;
-    margin: 0px 110px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    line-height: 1em;
+    background: linear-gradient(45deg, #12110d, #383528);
+    color: #f4f4f4;
+    max-width: 1200px;
 }
 
 header {
+    margin: 0px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    
+}
+
+header h1 {
+    margin: 10px 0;
+    font-size: 1.9em;
+    padding: 0;
     text-align: left;
 }
-header h1 {
-    margin: 5px 0;
-    font-size: 2em;
-}
 
+header p {
+    margin: 10 0;
+    font-size: 0.6em;
+    line-height: 1.8em;
+    text-align: left;
+}
 .header-content {
     display: flex;
+    gap: 12px;
     
-    gap: 10px;
-    margin-bottom: 10px;
 }
 
-/* Image Styling */
+/* Poster & Trailer Styling */
 .poster {
-    max-width: 40%;
+    max-width: 28%;
     height: auto;
     border-radius: 8px;
-    transition: transform 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.poster:hover {
-    transform: scale(1.05);
-}
-
-/* Trailer Styling */
-.trailer {
-    width: 50%; /* Same width as the poster */
-    height: 250px; /* Same height as the poster */
+.trailer{
+   
+    width: 220%; 
+    height: auto; /* Same height as the poster */
     aspect-ratio: 16 / 9; /* Ensures the trailer maintains a standard video aspect ratio */
     border-radius: 8px;
-    transition: transform 0.3s ease;
+    border-color: #12110d;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
 }
-
-.trailer:hover {
-    transform: scale(1.05);
+.poster:hover, .trailer:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Section Styling */
 section {
-    padding: 0px 10px;
-    margin: 0px auto;
+    padding: 12px;
+    margin: auto;
 }
+
 section div {
-    background-color: #fff;
-    padding: 10px;
-    margin: 0px 0px;
+    color: #f4f4f4;
+    background: linear-gradient(45deg, #3a3e30, #12110d);
+    padding: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 section div:hover {
     transform: translateY(-6px);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
-.producer, .description, .summary, .why-love {
-    font-size: 1em;
+
+
+/* effect for all links */
+section a , header a {
+    position: relative;
+    text-decoration: none;
+    color: #98d4ff;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
+
+section a:hover , header a:hover {
+    color: #ff6347;
+}
+
+
+/* section text */
+.producer, .description, .summary, .why-love {
+    font-size: 0.8em;
+}
+
+section p {
+    margin-bottom: 20px;
+    line-height: 1.6em;
+}
+
+section h2 {
+    margin: 10 0;
+    padding: 0;
+}
+
+/* footer */
 footer {
     text-align: center;
     padding: 20px;
-    margin: 0px 10px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+    margin: 10px;
+    color: white;
+    background: transparent;
 }
