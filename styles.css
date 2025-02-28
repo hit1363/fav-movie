@@ -50,7 +50,7 @@ header p {
     height: auto; /* Same height as the poster */
     aspect-ratio: 16 / 9; /* Ensures the trailer maintains a standard video aspect ratio */
     border-radius: 8px;
-    border-color: #12110d;
+    border: 1px solid #262626;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     
