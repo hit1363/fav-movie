@@ -1,10 +1,28 @@
+:root {
+    --main-color: linear-gradient(45deg, #ffffff, #7e7e7e);
+    --secondary-color: linear-gradient(45deg, #eeeeee, #868686);
+    --accent-color: #b4b4b4;
+    --text-color: #000000;
+    --link-color: #00518b;
+    --hover-color: #e02707;
+}
+
+.darkmode {
+    --main-color: linear-gradient(45deg, #000000, #333333);
+    --secondary-color: linear-gradient(45deg, #444444, #666666);
+    --accent-color: #555555;
+    --text-color: #ffffff;
+    --link-color: #00aaff;
+    --hover-color: #ff0000;
+}
+/* Global Styles */
 body {
     font-family:Georgia, 'Times New Roman', Times, serif;
     margin: 0 auto;
     padding: 0;
     line-height: 1em;
-    background: linear-gradient(45deg, #12110d, #383528);
-    color: #f4f4f4;
+    background: var(--main-color);
+    color: var(--text-color);
     max-width: 1200px;
 }
 
@@ -14,6 +32,33 @@ header {
     display: flex;
     flex-direction: column;
     
+}
+#theme-toggle {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: transparent;
+    top: 20px;
+    right: 20px;
+    background-color: var(--accent-color);
+    cursor: pointer;
+    
+}
+#theme-toggle svg {
+    fill: var(--text-color);
+}
+#theme-toggle svg:last-child {
+    display: none;
+}
+.darkmode #theme-toggle svg:first-child {
+    display: none;
+}
+.darkmode #theme-toggle svg:last-child {
+    display: block;
 }
 
 header h1 {
@@ -67,8 +112,8 @@ section {
 }
 
 section div {
-    color: #f4f4f4;
-    background: linear-gradient(45deg, #3a3e30, #12110d);
+    color: var(--text-color);
+    background: var(--secondary-color);
     padding: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
@@ -85,13 +130,13 @@ section div:hover {
 section a , header a {
     position: relative;
     text-decoration: none;
-    color: #98d4ff;
+    color: var(--link-color);
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 section a:hover , header a:hover {
-    color: #ff6347;
+    color: var(--hover-color);
 }
 
 
@@ -115,6 +160,6 @@ footer {
     text-align: center;
     padding: 20px;
     margin: 10px;
-    color: white;
+    color: var(--text-color);
     background: transparent;
 }
